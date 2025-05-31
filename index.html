@@ -35,6 +35,39 @@
     </nav>
   </header>
   <main>
+    <section id="home">
+      <h2>홈</h2>
+      <img src="portrait.png" alt="홈 샘플 이미지" style="max-width:300px;">
+    </section>
+    <section id="company">
+      <h2>회사소개</h2>
+      <p>혁신적인 AI 아티스트와 회사의 비전을 소개합니다.</p>
+    </section>
+    <section id="history">
+      <h2>연혁</h2>
+      <img src="flower-icon.svg" alt="연혁 샘플 이미지" style="max-width:120px;">
+      <ul>
+        <li>2020 - 회사 설립</li>
+        <li>2022 - 주요 프로젝트 런칭</li>
+      </ul>
+    </section>
+    <section id="products">
+      <h2>제품소개</h2>
+      <img src="work-musea.png" alt="제품소개 샘플 이미지" style="max-width:300px;">
+    </section>
+    <section id="product1">
+      <h2>제품1</h2>
+      <button id="openSnakeModal">Snake Game 보기</button>
+      <img src="circle-icon.svg" alt="제품1 샘플 이미지" style="max-width:120px;">
+    </section>
+    <section id="product2">
+      <h2>제품2</h2>
+      <img src="work-musea.png" alt="제품2 샘플 이미지" style="max-width:300px;">
+    </section>
+    <section id="location">
+      <h2>찾아오시는길</h2>
+      <p>서울특별시 성동구 아차산로17길 48</p>
+    </section>
     <section class="intro">
       <h1>Artist Redefining Architecture with AI-Driven Design</h1>
       <img class="flower-icon" src="flower-icon.svg" alt="Flower Icon">
@@ -76,10 +109,26 @@
       </ul>
     </section>
     <section id="alicecoding">
-    <h2>앨리스코딩 성수낙낙 위치</h2>
-    <p>서울특별시 성동구 아차산로17길 48</p>
-    <iframe src="https://map.naver.com/p/search/%EC%95%A8%EB%A6%AC%EC%8A%A4%EC%BD%94%EB%94%A9%20%EC%84%B1%EC%88%98%EB%82%99%EB%82%99/place/1154420335?c=15.00,0,0,0,dh" width="100%" height="400" frameborder="0" style="border:0;" allowfullscreen></iframe>
-  </section>
+      <h2>앨리스코딩 성수낙낙 위치</h2>
+      <p>서울특별시 성동구 아차산로17길 48</p>
+      <iframe src="https://map.naver.com/p/search/%EC%95%A8%EB%A6%AC%EC%8A%A4%EC%BD%94%EB%94%A9%20%EC%84%B1%EC%88%98%EB%82%99%EB%82%99/place/1154420335?c=15.00,0,0,0,dh" width="100%" height="400" frameborder="0" style="border:0;" allowfullscreen></iframe>
+    </section>
+
+    <!-- Snake Game Modal -->
+    <div id="snakeModal" style="display:none; position:fixed; top:0; left:0; width:100vw; height:100vh; background:rgba(0,0,0,0.8); justify-content:center; align-items:center; z-index:1000;">
+      <div style="background:#fff; padding:20px; border-radius:10px; position:relative; width:440px; max-width:95vw;">
+        <button id="closeSnakeModal" style="position:absolute; top:10px; right:10px;">닫기</button>
+        <iframe src="/snake-game/index.html" width="400" height="480" style="border:none;"></iframe>
+      </div>
+    </div>
+    <script>
+      document.getElementById('openSnakeModal').onclick = function() {
+        document.getElementById('snakeModal').style.display = 'flex';
+      };
+      document.getElementById('closeSnakeModal').onclick = function() {
+        document.getElementById('snakeModal').style.display = 'none';
+      };
+    </script>
 </main>
 </body>
 </html>
